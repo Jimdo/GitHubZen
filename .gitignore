@@ -22,6 +22,7 @@ build/
 /rdoc/
 
 ## Environment normalization:
+.env
 /.bundle/
 /vendor/bundle
 /lib/bundler/man/

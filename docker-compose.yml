@@ -1,0 +1,9 @@
+zenhub:
+  build: .
+  ports:
+    - "35762:35762"
+  volumes:
+    - ./:/opt/app
+  env_file: .env
+  environment:
+    PORT: 35762
