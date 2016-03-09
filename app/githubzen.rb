@@ -1,6 +1,14 @@
 require 'bundler/setup'
 Bundler.require(:default)
 
+class Welcome < Sinatra::Base
+  require 'tilt/rdiscount'
+
+  get('/') do
+    markdown IO.read settings.root + '/../README.md'
+  end
+end
+
 class GitHubZen < Sinatra::Application
 
   set :octokit, Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
@@ -10,6 +18,8 @@ class GitHubZen < Sinatra::Application
   configure :development do
     register Sinatra::Reloader
   end
+
+  use Welcome
 
   before do
     halt 401, 'go away!' unless params['token'] == settings.token

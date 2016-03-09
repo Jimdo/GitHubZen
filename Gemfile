@@ -6,6 +6,7 @@ gem 'sinatra-contrib'
 gem 'puma'
 gem 'octokit'
 gem 'rack-contrib'
+gem 'rdiscount'
 
 group :test, :development do
   gem 'rspec'

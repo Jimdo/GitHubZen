@@ -29,6 +29,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rdiscount (2.1.8)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -72,6 +73,7 @@ DEPENDENCIES
   pry
   puma
   rack-contrib
+  rdiscount
   rspec
   sinatra
   sinatra-contrib
