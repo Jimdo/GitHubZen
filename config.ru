@@ -1,3 +1,3 @@
-require './app/zenhub'
+require './app/githubzen'
 
-run ZenHub
+run GitHubZen

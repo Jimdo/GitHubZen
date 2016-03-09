@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require "sinatra/reloader"
 
-class ZenHub < Sinatra::Application
+class GitHubZen < Sinatra::Application
 
   configure :development do
     register Sinatra::Reloader

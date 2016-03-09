@@ -1,4 +1,4 @@
-zenhub:
+githubzen:
   build: .
   ports:
     - "35762:35762"

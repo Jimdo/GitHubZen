@@ -8,5 +8,5 @@ services:
   - docker
 
 script:
-  - docker build -t zenhub .
-  - docker run zenhub bundle exec rspec
+  - docker build -t githubzen .
+  - docker run githubzen bundle exec rspec
