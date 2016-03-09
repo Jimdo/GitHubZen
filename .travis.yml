@@ -10,3 +10,13 @@ services:
 script:
   - docker build -t githubzen .
   - docker run githubzen bundle exec rspec
+
+before_deploy:
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker tag githubzen jimdo/githubzen:latest
+
+deploy:
+  provider: script
+  script: docker push jimdo/githubzen:latest
+  on:
+    branch: master
