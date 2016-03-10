@@ -78,6 +78,9 @@ The application expects the following environment variables.
 PORT=34567
 TOKEN=EGC2Ech2tErNXMwTr2
 GITHUB_TOKEN=aaa9db106ab0faca9cd529f466508b1b4de485e1
+ZENDESK_URL=https://acme.zendesk.com/api/v2
+ZENDESK_USERNAME=support@acme.com
+ZENDESK_TOKEN=a6df7y45a9ugh89sdfy79sdfg89y
 ```
 
 ## Feature Wishlist:
