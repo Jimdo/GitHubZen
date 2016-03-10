@@ -1,0 +1,10 @@
+{
+  "ticket": {
+     "id":      35436,
+     "subject": "My printer is on fire!",
+     "status":  "solved"
+  },
+  "audit": {
+     "events": []
+  }
+}

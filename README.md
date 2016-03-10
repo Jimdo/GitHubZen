@@ -33,6 +33,7 @@ The configuration of GitHubZen is a bit cumbersome at the moment. With the follo
   ```js
   {
     "token": "EGC2Ech2tErNXMwTr2",
+    "ticket_id": 272159,
     "repo": "Jimdo/template-chicago",
     "agent_name": "Hannah V. Glock",
     "agent_email": "hannah@jimdo.com",
@@ -63,6 +64,12 @@ The configuration of GitHubZen is a bit cumbersome at the moment. With the follo
 ### GitHub
 Generate a [Personal access token](https://github.com/settings/tokens) for the users that will create the Zendesk tickets in GitHub. And put the token in the GitHubZen environment.
 
+1. #### Repo hooks
+
+  Create a new webhook in every repository you have added in Zendesk. Make sure to enable `Issue comment` everything else will be discarded.
+
+  ![](docs/github-webhook.png)
+
 ## Deployment
 We provide a production ready [docker container](https://hub.docker.com/r/jimdo/githubzen/).
 
@@ -74,5 +81,5 @@ GITHUB_TOKEN=aaa9db106ab0faca9cd529f466508b1b4de485e1
 ```
 
 ## Feature Wishlist:
-- Use Zendesk `external_id` to track gh-issues in zendesk and report closed issues (or updates) back to zendesk
 - Create Zendesk configuration with rake task
+- Create Github webhook on Zendesk request

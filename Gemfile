@@ -7,6 +7,7 @@ gem 'puma'
 gem 'octokit'
 gem 'rack-contrib'
 gem 'rdiscount'
+gem 'zendesk_api'
 
 group :test, :development do
   gem 'rspec'

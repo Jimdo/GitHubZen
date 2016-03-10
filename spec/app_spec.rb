@@ -5,6 +5,7 @@ describe GitHubZen do
   let(:token) { "EGC2Ech2tErNXMwTr2" }
   let(:zendesk_params) {{
     "token" => token,
+    "ticket_id" => 272159,
     "repo" => "Jimdo/template-chicago",
     "agent_name" => "Hannah V. Glock",
     "agent_email" => "hannah@jimdo.com",

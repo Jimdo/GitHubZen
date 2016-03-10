@@ -5,6 +5,10 @@ class FakeGitHub < Sinatra::Base
     json_response 201, 'issue.json'
   end
 
+  get '/users/:login' do
+    json_response 200, 'user.json'
+  end
+
   private
 
   def json_response(response_code, file_name)

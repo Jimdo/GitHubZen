@@ -11,7 +11,10 @@ GEM
       multipart-post (>= 1.2, < 3)
     git-version-bump (0.15.1)
     hashdiff (0.3.0)
+    hashie (3.4.3)
+    inflection (1.0.0)
     method_source (0.8.2)
+    mime-types (2.99.1)
     multi_json (1.11.2)
     multipart-post (2.0.0)
     octokit (4.3.0)
@@ -47,6 +50,7 @@ GEM
     sawyer (0.7.0)
       addressable (>= 2.3.5, < 2.5)
       faraday (~> 0.8, < 0.10)
+    scrub_rb (1.0.1)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -64,6 +68,13 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
+    zendesk_api (1.13.4)
+      faraday (~> 0.9)
+      hashie (>= 1.2, < 4.0, != 3.3.0)
+      inflection
+      mime-types (~> 2.99)
+      multipart-post (~> 2.0)
+      scrub_rb (~> 1.0.1)
 
 PLATFORMS
   ruby
@@ -78,6 +89,7 @@ DEPENDENCIES
   sinatra
   sinatra-contrib
   webmock
+  zendesk_api
 
 BUNDLED WITH
    1.11.2
