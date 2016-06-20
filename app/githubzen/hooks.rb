@@ -1,11 +1,11 @@
 class Hooks < Base
   post '/hooks' do
     return halt 406, 'Only "issue_comment" supported yet' unless params['action'] == "created"
-    user = settings.octokit.user(params['comment']['user']['login'])
-    unless user['email'] == ENV['GITHUB_BOT_USER_EMAIL'] then
+    user = params['comment']['user']['login']
+    unless user == ENV['GITHUB_BOT_USER'] then
       body = erb :ticket, locals: {
         text: params['comment']['body'],
-        developer: user,
+        developer: settings.octokit.user(user),
         issue: params['issue']
       }
       ticket = settings.zendesk.search(query: "type:ticket external_id:#{params['issue']['url']}").first
