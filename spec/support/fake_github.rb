@@ -5,6 +5,10 @@ class FakeGitHub < Sinatra::Base
     json_response 201, 'issue.json'
   end
 
+  post '/repos/:owner/:repo/issues/:id/comments' do
+    json_response 201, 'comments.json'
+  end
+
   get '/users/:login' do
     json_response 200, 'user.json'
   end
