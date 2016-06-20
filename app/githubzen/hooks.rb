@@ -2,7 +2,7 @@ class Hooks < Base
   post '/hooks' do
     return halt 406, 'Only "issue_comment" supported yet' unless params['action'] == "created"
     user = settings.octokit.user(params['comment']['user']['login'])
-    unless user['email'] == ENV['ZENDESK_USERNAME'] then
+    unless user['email'] == ENV['GITHUB_BOT_USER_EMAIL'] then
       body = erb :ticket, locals: {
         text: params['comment']['body'],
         developer: user,
