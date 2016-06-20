@@ -26,9 +26,12 @@ The configuration of GitHubZen is a bit cumbersome at the moment. With the follo
   Go to `Settings` -> `Extension` and `add target` -> `HTTP target`
 
   ![](docs/zendesk-http-target.png)
+
+  Do this step twice, so create a target for `POST /issues` and `POST /comments`.
+
 1. #### Trigger
 
-  GitHubZen expects to receive the following json
+  GitHubZen expects to receive the following json for issues:
 
   ```js
   {
@@ -42,6 +45,19 @@ The configuration of GitHubZen is a bit cumbersome at the moment. With the follo
     "labels": ["bug", "zendesk"]
   }
   ```
+
+...and the following json for comments:
+
+```js
+{
+  "token": "EGC2Ech2tErNXMwTr2",
+  "repo": "Jimdo/template-chicago",
+  "agent_name": "Hannah V. Glock",
+  "agent_email": "hannah@jimdo.com",
+  "issue": "47", // full url or issue id is supported
+  "comment": "a beautiful comment" // markdown
+}
+```
 
   In Zendesk this would look link this:
 
@@ -81,6 +97,7 @@ GITHUB_TOKEN=aaa9db106ab0faca9cd529f466508b1b4de485e1
 ZENDESK_URL=https://acme.zendesk.com/api/v2
 ZENDESK_USERNAME=support@acme.com
 ZENDESK_TOKEN=a6df7y45a9ugh89sdfy79sdfg89y
+GITHUB_BOT_USER_EMAIL=support-bot@acme.com
 ```
 
 ## Feature Wishlist:
